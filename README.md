@@ -26,7 +26,7 @@ Screenshots below show selected tools and pages from the live product. Keep thes
 
 ### Homepage
 
-![ProImageKit homepage](https://workeera.com/git/proimagekit/screenshots/homepage.png)
+![ProImageKit homepage](https://workeera.com/git/proimagekit/screenshots/proimagekit.png)
 
 ### Image Resizer
 
