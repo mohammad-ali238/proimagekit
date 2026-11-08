@@ -1,0 +1,50 @@
+---
+# ─────────────────────────────────────────────────────────────────────────────
+# ARTICLE TEMPLATE — copy this file, rename it and fill it in.
+# Files starting with "_" are ignored, so this one never appears on the site.
+#
+# The file name becomes the URL: my-article.mdx → /blog/my-article
+# Use .mdx to include components (<Callout>, <ToolCard>), or .md for plain Markdown.
+# Images: put them in public/blog/<slug>/ and link them as /blog/<slug>/image.jpg
+# ─────────────────────────────────────────────────────────────────────────────
+
+# REQUIRED ────────────────────────────────────────────────────────────────────
+title: Your Article Title                 # shown as the H1 (max 120 characters)
+description: >-                           # meta description + summary (aim for 120–160 characters)
+  One or two sentences that describe the article and make people want to read it.
+status: draft                             # draft = only visible with `npm run dev`; published = live
+publishedAt: 2026-09-29                   # YYYY-MM-DD, or 2026-09-29T09:00:00Z; a future date schedules it
+
+# OPTIONAL ────────────────────────────────────────────────────────────────────
+updatedAt: 2026-09-29                     # last meaningful update; "Latest articles" is sorted by this
+                                          # (defaults to publishedAt; can't be earlier than it)
+slug: custom-url-slug                     # override the URL (defaults to the file name)
+author: Jane Doe                          # defaults to the site name
+tags: [tag one, tag two]                  # shown on the page and used as keywords
+coverImage: /blog/custom-url-slug/cover.jpg   # 1200×630 works best (also used as the social image)
+coverAlt: Describe the cover image        # required when coverImage is set
+relatedTools: [image-compressor]          # tool slugs shown as "Try it yourself" cards
+                                          # (see src/lib/tools-registry.ts for all slugs)
+
+# SEO OVERRIDES (all optional) ────────────────────────────────────────────────
+seo:
+  title: Shorter Title for Search Results # <title> tag, max 70 characters (defaults to title)
+  description: Different meta description for search results, max 170 characters.
+  keywords: [extra keyword, another keyword]
+  canonical: https://example.com/original-article   # only if it was first published elsewhere
+  noindex: false                          # true = hidden from search engines and the sitemap
+  ogImage: /blog/custom-url-slug/social.jpg   # social share image (defaults to coverImage, then generated)
+---
+
+Write the introduction here. It's the first thing readers see after the title.
+
+## Use ## for section headings
+
+Regular **Markdown** works: *italic*, [links to tools](/tools/image-resizer), [external links](https://example.com)
+(these open in a new tab), lists, `code`, tables and images:
+
+![Describe the image for screen readers](/blog/custom-url-slug/example.jpg)
+
+<Callout type="tip">Callout types: tip, info or warning.</Callout>
+
+<ToolCard slug="image-compressor" />
